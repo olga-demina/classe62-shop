@@ -1,3 +1,57 @@
-body {
-    background-color: aqua;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* COMMON */
+.container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 3em auto;
+    /* border: 1px solid red; */
+}
+
+.row {
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.bg-green {
+    background-color: green;
+}
+
+/* PRODUCT  */
+.product {
+    display: inline-block;
+    position: relative;
+    width: calc((100%/3) - 8px);
+    margin: 0 4px;
+    /* border: 2px solid blue; */
+    vertical-align: top;
+}
+
+.product img {
+    width: 100%;
+}
+
+.product .discount {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Stato normale, il cuore non visibile */
+.product .heart {
+    display: none;
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    color: red;
+}
+
+/* Qundo passo con l mouse sul product, il cuore è visibile */
+.product:hover .heart{
+    display: inline-block;
 }
